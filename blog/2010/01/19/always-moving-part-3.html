@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Always Moving, Part 3</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="description" content="A site about Erik Daniel.">
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/css/syntax.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">
+        <link rel="stylesheet" href="/css/blog.css">
+
+    </head>
+    <body>
+        <div class="pure-g-r" id="layout">
+            <div class="sidebar pure-u">
+                <header class="header">
+                <hgroup>
+                <h1 class="brand-title"><a href="/">erik daniel</a></h1>
+                <h2 class="brand-tagline">get your plane ride on time</h2>
+                </hgroup>
+                <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a class="pure-button" href="/blog">Blog</a></li>
+                    <li class="nav-item"><a class="pure-button" href="http://github.com/erikdaniel">Github</a></li>
+                    <li class="nav-item"><a class="pure-button" href="http://twitter.com/erik_daniel">Twitter</a></li>
+                </ul>
+                </nav>
+                </header>
+            </div>
+
+
+        <div class="pure-u-1">
+            <div class="content">
+            <div class="posts">
+    <section class="post">
+    <header class="post">
+    <h2 class="post-title">Always Moving, Part 3</h2>
+  </header>
+  <div class="post-description">
+    <p>The <a href="http://drupal.org/project/views">Views</a> module has to be the greatest thing that has happened to content management since Microsoft ceased supporting IE6. Want a list of the latest posts? it can do that. You want a block displaying the top rated content? It can do that too. List users? Check. If you have content, the Views module can spit it out any way you like it, and let you theme it, too.</p>
+
+<!--break-->
+
+<p>I needed a couple different views to finish up my site. I wanted to list and display the portfolio content in an attractive way, and I wanted a cool little block that displayed the latest portfolio entries.</p>
+
+<p>The portfolio content type carried the usual stuff, description, title, etc. It also gave me an array of images for the item. I wanted to be able to display the images in an attractive way, even when I didn't know how many items there would be. I decided to have the view spit them out in an unordered list, and style the thing in a horizontal line, hiding any more than 3 images.</p>
+
+<p>A little jQuery animates the whole thing to slide over and display the hidden images, if there are any. jQuery comes native with Drupal, so one just needs to create a new js file and include it in the template's .info file to include it on every page, but not wanting to waste the bandwidth, I wrote a little template function to load the file only on portfolio pages.</p>
+
+<p>The the Thickbox module gave me the lightbox function I was looking for.</p>
+
+<p>Finally, I made another quick view that only loads the four newest portfolio nodes and spits out just the thumbnails as links to the full node. I then created a block from it. A little CSS gave me just the right look.</p>
+
+<p>At the end of the process, I had created a nice, clean blog template on a CMS that is very easy to update. I might not even change it for a few months!</p>
+
+  </div>
+  </section>
+</div>
+
+
+            <footer class="footer">
+                <section class="closing">
+                    <blockquote class="content-quote">Nothing can be so amusingly arrogant as a young man who has just discovered an old idea and thinks it is his own. - Sidney J. Harris</blockquote>
+                </section>
+            </footer>
+ 
+
+
+
+            </div>
+        </div>
+    </div>
+
+<script src="http://yui.yahooapis.com/3.12.0/build/yui/yui.js"></script>
+<script>
+YUI().use('node-base', 'node-event-delegate', function (Y) { Y.one('body').delegate('click', function (e) { e.preventDefault(); }, 'a[href="#"]'); });
+</script>
+
+
+</body>
+</html>

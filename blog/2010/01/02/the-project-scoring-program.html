@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>The Project: Scoring Program</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="description" content="A site about Erik Daniel.">
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/css/syntax.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">
+        <link rel="stylesheet" href="/css/blog.css">
+
+    </head>
+    <body>
+        <div class="pure-g-r" id="layout">
+            <div class="sidebar pure-u">
+                <header class="header">
+                <hgroup>
+                <h1 class="brand-title"><a href="/">erik daniel</a></h1>
+                <h2 class="brand-tagline">get your plane ride on time</h2>
+                </hgroup>
+                <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a class="pure-button" href="/blog">Blog</a></li>
+                    <li class="nav-item"><a class="pure-button" href="http://github.com/erikdaniel">Github</a></li>
+                    <li class="nav-item"><a class="pure-button" href="http://twitter.com/erik_daniel">Twitter</a></li>
+                </ul>
+                </nav>
+                </header>
+            </div>
+
+
+        <div class="pure-u-1">
+            <div class="content">
+            <div class="posts">
+    <section class="post">
+    <header class="post">
+    <h2 class="post-title">The Project: Scoring Program</h2>
+  </header>
+  <div class="post-description">
+    <p><img src="/sites/erikdaniel.com/files/images/classimage.jpg" alt='' class="imgRight" />
+ <p>For those (both?) of you who are reading this and don&#39;t know me personally, I do a little bit of work for <a href="http://poetryslam.com">Poetry Slam, Inc.</a>, the non-profit that operates the National Poetry Slam, Individual World Poetry Slam, and Women of the World Poetry Slam. Those are some of the largest, if not the largest performance poetry competitions in the world. For the past few years I&#39;ve been a director for a few of those, and worn a few hats for some others, mostly involving logistics. </p>
+<p>The biggest headache in the entire process is scoring. Frankly our scoring system sucks.</p>
+&lt;!--break--&gt;
+<p>If you have never been to a poetry slam (really?), competitors perform original poems with certain limitations, and are given scores from 0 to 10 based on the whim of 5 judges chosen at random from the audience. The high and low scores are dropped out, the remaining three added up, any time penalties are assessed, and the final score is recorded.</p>
+<p>We do this all by hand. Team and individual competitions have differing rules, but in a large competition, up to 16 bouts, each containing many scores need to be hand carried to a central location, then read and entered into a spreadsheet for number crunching. This whole process is slow and incredibly error-prone.</p>
+<p>I know what you are thinking, writing a little app for this would be easy! Here&#39;s the deal, PSi is a non-profit, and no one gets paid for anything there, so this little project was at the mercy of my free time. Well I have some free time!</p>
+<p>Here are the requirements:</p>
+<ol>
+<li>Platform neutral(Including Linux!)</li>
+<li>Hold a list of competitors</li>
+<li>Allow bout setup information to be entered<ol>
+  <li>Number of Judges</li>
+  <li>Number of Rotations</li>
+  <li>Number of performers per rotation (e.g. 12/7/4)</li>
+  <li>Basic info (Venue, MC, Scorekeeper, Bout Manager, Bout Identifier)</li>
+  </ol>
+</li>
+<li>Keep time</li>
+<li>Assess Penalties</li>
+<li>Allow multiple rotation order types (e.g. random, manual entry, by score)</li>
+<li>Handle ties</li>
+<li>Export to XML or CSV</li>
+</ol>
+<p>The work so far:</p>
+<ol>
+<li>UML Class diagrams</li>
+<li>Use-Case models</li>
+<li>Wrote base classes</li>
+<li>Tested Bout setup code</li>
+<li>Started UI layout in Flex</li>
+<li>Created Timer Component</li>
+<li>Created rotation setup component</li>
+<li>Tested Bout setup UI</li>
+</ol></p>
+
+<p><p>I would love to have this done in time for WOW in March. If you are interested in helping as a tester, <a href="/connect">hit me up</a> I need a good name for it as well, PSi Scoring Program just sounds lame.</p>
+
+<blockquote>
+A nerd needs a project because a nerd builds stuff. All the time. Those lulls in the conversation over dinner? That’s the nerd working on his project in his head.<br />-Michael Lopp<br /><a href="http://www.randsinrepose.com/archives/2007/11/11/the_nerd_handbook.html">randsinrepose.com :: The Nerd Handbook</a></blockquote>
+
+  </div>
+  </section>
+</div>
+
+
+            <footer class="footer">
+                <section class="closing">
+                    <blockquote class="content-quote">Nothing can be so amusingly arrogant as a young man who has just discovered an old idea and thinks it is his own. - Sidney J. Harris</blockquote>
+                </section>
+            </footer>
+ 
+
+
+
+            </div>
+        </div>
+    </div>
+
+<script src="http://yui.yahooapis.com/3.12.0/build/yui/yui.js"></script>
+<script>
+YUI().use('node-base', 'node-event-delegate', function (Y) { Y.one('body').delegate('click', function (e) { e.preventDefault(); }, 'a[href="#"]'); });
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>iPad Apptastic</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="description" content="A site about Erik Daniel.">
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/css/syntax.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">
+        <link rel="stylesheet" href="/css/blog.css">
+
+    </head>
+    <body>
+        <div class="pure-g-r" id="layout">
+            <div class="sidebar pure-u">
+                <header class="header">
+                <hgroup>
+                <h1 class="brand-title"><a href="/">erik daniel</a></h1>
+                <h2 class="brand-tagline">get your plane ride on time</h2>
+                </hgroup>
+                <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a class="pure-button" href="/blog">Blog</a></li>
+                    <li class="nav-item"><a class="pure-button" href="http://github.com/erikdaniel">Github</a></li>
+                    <li class="nav-item"><a class="pure-button" href="http://twitter.com/erik_daniel">Twitter</a></li>
+                </ul>
+                </nav>
+                </header>
+            </div>
+
+
+        <div class="pure-u-1">
+            <div class="content">
+            <div class="posts">
+    <section class="post">
+    <header class="post">
+    <h2 class="post-title">iPad Apptastic</h2>
+  </header>
+  <div class="post-description">
+    <p>Spent the last two months immersed in HTML5 and iOS. At work we built a slick iOS port of a few of the sections from <a href="http://www.vw.com">www.vw.com</a>.</p><p>In the beginning it was meant to be a straight web-app, but as the requirements became clearer, we realized that we couldn't rely on the network. We would have to pull all of the data and make a native app.</p>
+
+<p>Making it native didn't preclude reusing all the HTML that was already there, thanks to <a href="http://phonegap.com">Phonegap</a>. In case you have never heard of it, Phonegap takes HTML, Javascript and CSS and wraps in a native app, allowing you to easily convert your mobile web apps to native. More importantly, it works on a variety of devices - meaning one codebase for iOS, Android, Blackberry, and more.</p><p>As part of the project, I had to write up an HTML/JS version of the iOS picker. I'll post that next.</p>
+
+  </div>
+  </section>
+</div>
+
+
+            <footer class="footer">
+                <section class="closing">
+                    <blockquote class="content-quote">Nothing can be so amusingly arrogant as a young man who has just discovered an old idea and thinks it is his own. - Sidney J. Harris</blockquote>
+                </section>
+            </footer>
+ 
+
+
+
+            </div>
+        </div>
+    </div>
+
+<script src="http://yui.yahooapis.com/3.12.0/build/yui/yui.js"></script>
+<script>
+YUI().use('node-base', 'node-event-delegate', function (Y) { Y.one('body').delegate('click', function (e) { e.preventDefault(); }, 'a[href="#"]'); });
+</script>
+
+
+</body>
+</html>

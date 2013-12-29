@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Immersed in HTML5</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="description" content="A site about Erik Daniel.">
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/css/syntax.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">
+        <link rel="stylesheet" href="/css/blog.css">
+
+    </head>
+    <body>
+        <div class="pure-g-r" id="layout">
+            <div class="sidebar pure-u">
+                <header class="header">
+                <hgroup>
+                <h1 class="brand-title"><a href="/">erik daniel</a></h1>
+                <h2 class="brand-tagline">get your plane ride on time</h2>
+                </hgroup>
+                <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a class="pure-button" href="/blog">Blog</a></li>
+                    <li class="nav-item"><a class="pure-button" href="http://github.com/erikdaniel">Github</a></li>
+                    <li class="nav-item"><a class="pure-button" href="http://twitter.com/erik_daniel">Twitter</a></li>
+                </ul>
+                </nav>
+                </header>
+            </div>
+
+
+        <div class="pure-u-1">
+            <div class="content">
+            <div class="posts">
+    <section class="post">
+    <header class="post">
+    <h2 class="post-title">Immersed in HTML5</h2>
+  </header>
+  <div class="post-description">
+    <p>I have been checking in on a <a href="http://creativelive.com/courses/html5mobile/">Mobile/HTML5</a> course put on by <a href="http://creativelive.com/">CreativeLIVE</a> and sponsored by O'Reilly. Its a ten week course focused on creating mobile web apps, led by Jake Carter. </p>
+
+<p>The first week was a focused on setting up your environment for development, which I didn't need, but it was still interesting. A web server that supports PHP is required, as well as a mobile phone, or phone emulator. I have an Android phone, but I installed the emulator anyway to QA with differing versions and screen sized. The iPhone emulator is a different matter.</p>
+
+<p>A brief aside here. Apple being, well, Apple - they don't offer an emulator for the PC. I think this is an interesting decision, considering the massive amount of developers who work on Linux and Windows machines, and aren't willing to add an additional physical device to their offices and workflows. I don't really get it. Are they trying to sell more Macs to developers? Doesn't this create a barrier between Apple and potential customers? </p>
+
+<p>Back to the course. Week two was more interesting. We covered the basics of HTML5 - The Doctype, some new tags, etc. Then put together a quick UI for a Twitter app. I picked up O'Reilly's <a href="http://oreilly.com/catalog/9780596806033">HTML5:Up and Running</a>, so this was nothing new to me, but putting it together in an actual interface with some CSS3 was a good time.</p>
+
+<p>Next week we'll add the AJAX calls and cover some security issue. If you have the time, I recommend the course. Oh, and did I mention its free?</p>
+
+<!--break-->
+
+  </div>
+  </section>
+</div>
+
+
+            <footer class="footer">
+                <section class="closing">
+                    <blockquote class="content-quote">Nothing can be so amusingly arrogant as a young man who has just discovered an old idea and thinks it is his own. - Sidney J. Harris</blockquote>
+                </section>
+            </footer>
+ 
+
+
+
+            </div>
+        </div>
+    </div>
+
+<script src="http://yui.yahooapis.com/3.12.0/build/yui/yui.js"></script>
+<script>
+YUI().use('node-base', 'node-event-delegate', function (Y) { Y.one('body').delegate('click', function (e) { e.preventDefault(); }, 'a[href="#"]'); });
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Always Moving, Part 1</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="description" content="A site about Erik Daniel.">
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/css/syntax.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">
+        <link rel="stylesheet" href="/css/blog.css">
+
+    </head>
+    <body>
+        <div class="pure-g-r" id="layout">
+            <div class="sidebar pure-u">
+                <header class="header">
+                <hgroup>
+                <h1 class="brand-title"><a href="/">erik daniel</a></h1>
+                <h2 class="brand-tagline">get your plane ride on time</h2>
+                </hgroup>
+                <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a class="pure-button" href="/blog">Blog</a></li>
+                    <li class="nav-item"><a class="pure-button" href="http://github.com/erikdaniel">Github</a></li>
+                    <li class="nav-item"><a class="pure-button" href="http://twitter.com/erik_daniel">Twitter</a></li>
+                </ul>
+                </nav>
+                </header>
+            </div>
+
+
+        <div class="pure-u-1">
+            <div class="content">
+            <div class="posts">
+    <section class="post">
+    <header class="post">
+    <h2 class="post-title">Always Moving, Part 1</h2>
+  </header>
+  <div class="post-description">
+    <p>It likely would have been a lot easier to set this up in Wordpress, but I decided Drupal was the way to go, since I enjoy working with it so much. Another mark in Drupal's favor, is that I have been burned by some Wordpress (and Joomla for that matter) plugins going dark in the past, or not being updated for the latest releases of Wordpress. While that is still a danger with Drupal, I feel comfortable enough with the Drupal framework to trouble shoot any problems that come up myself. I just needed to actually get to work.</p>
+
+<p>This site is a decent example of fulfilling some basic website needs, and barely scratches the surface of the potential of Drupal. This post is meant to outline those needs, and how I used this software to meet them.</p>
+
+<!--break-->
+
+<p>What I needed:</p>
+
+<ul>
+<li>An "About" page</li>
+<li>A blog</li>
+<li>A contact form</li>
+<li>A portfolio</li>
+<li>Posting must require minimal effort.</li>
+</ul>
+
+<p>The first three items are included with a normal Drupal install. After installing the CMS. Page content is already activated, so the For a one-person blog, the option to add a new page is right there in the "Create Content" section of the Navigation menu.  I decided to use the "Story" content item for blog entries. The Blog module is really designed for a multi-user site, and has some default formatting that a single user site doesn't really need. I activated the contact module and set up the contact page through the site-wide form.</p>
+
+<p>The last item on my list needed a bit more than the basic install, namely the Content Construction Kit, or CCK for short (http://drupal.org/project/cck). This module allows you to create new content types, which can hold all types of information. That's kind of a broad explanation, so I'll give you a real example.</p>
+
+<p>The basic content items, including blog entries, stories, and pages all have a title, author, and text included in them. I needed a new content type that had all of those items, but also a thumbnail image, and an unspecified number of additional images. This would be a "portfolio item" content type.</p>
+
+<p>Sure I could have done this with a Story or Page content type, and just written HTML for all the extra images, but that would not be very efficient, and if I ever wanted to change the way those pages looked, I would need to re-do all that HTML. I am far too lazy for that.</p>
+
+<p>Using the CCK module, I added a new content type (portfolio), and added the field I needed. Since the new fields were image files, I also need some supplemental modules, <a href="http://drupal.org/project/filefield">FileField</a>, <a href="http://drupal.org/project/imagecache">ImageCache</a> and a couple supplemental modules that the Imagecache module needs. Those modules handle the uploading of files through the node edit interface, and handle the display of images once uploaded. This meant I wouldn't have to add any img tags to my portfolio content, as Drupal would handle all of that. Imagecache would even generate alternate sizes so I could just upload one image and it would handle the rest.</p>
+
+<p>Once the new content type was there, the functional parts of the site were pretty much done. After that I just needed to make it pretty. I'll leave that for another post.</p>
+
+  </div>
+  </section>
+</div>
+
+
+            <footer class="footer">
+                <section class="closing">
+                    <blockquote class="content-quote">Nothing can be so amusingly arrogant as a young man who has just discovered an old idea and thinks it is his own. - Sidney J. Harris</blockquote>
+                </section>
+            </footer>
+ 
+
+
+
+            </div>
+        </div>
+    </div>
+
+<script src="http://yui.yahooapis.com/3.12.0/build/yui/yui.js"></script>
+<script>
+YUI().use('node-base', 'node-event-delegate', function (Y) { Y.one('body').delegate('click', function (e) { e.preventDefault(); }, 'a[href="#"]'); });
+</script>
+
+
+</body>
+</html>

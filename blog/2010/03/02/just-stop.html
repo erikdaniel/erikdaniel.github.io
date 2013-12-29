@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Just Stop </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="description" content="A site about Erik Daniel.">
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/css/syntax.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">
+        <link rel="stylesheet" href="/css/blog.css">
+
+    </head>
+    <body>
+        <div class="pure-g-r" id="layout">
+            <div class="sidebar pure-u">
+                <header class="header">
+                <hgroup>
+                <h1 class="brand-title"><a href="/">erik daniel</a></h1>
+                <h2 class="brand-tagline">get your plane ride on time</h2>
+                </hgroup>
+                <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a class="pure-button" href="/blog">Blog</a></li>
+                    <li class="nav-item"><a class="pure-button" href="http://github.com/erikdaniel">Github</a></li>
+                    <li class="nav-item"><a class="pure-button" href="http://twitter.com/erik_daniel">Twitter</a></li>
+                </ul>
+                </nav>
+                </header>
+            </div>
+
+
+        <div class="pure-u-1">
+            <div class="content">
+            <div class="posts">
+    <section class="post">
+    <header class="post">
+    <h2 class="post-title">Just Stop </h2>
+  </header>
+  <div class="post-description">
+    <p><img src="<?php print $base_path; ?>/sites/erikdaniel.com/files/images/ie6.png&quot; style=&quot;float:right; margin:5px&quot;&gt;<p>As a web developer, I know that I am not alone in being less than enthusiastic about a certain dated Microsoft browser that continues to plague my work. I&#39;m writing about Internet Explorer 6, of course.</p>
+<p>Despite the fact that Microsoft recommends an update to a more secure version such as IE 8, and Google is no longer supporting the browser on some of their web services, IE 6 still has a market share topping 15% on many websites. With that many people using it, the challenge for us is to find a way to support a browser that many of us can&#39;t even install on our machines.</p>
+&lt;!--break--&gt;
+<p>I have seen some web developers actually refuse to support IE 6, and I have been, on many occasions, tempted to do so as well. However, as my business partner and friend Chris Land told me so many times, &quot;I think the customer would want everyone to be able to view their site, even idiots who use IE 6.&quot;</p>
+<p>Of course, they are not all idiots. Many of them are simply beholden to their IT departments, who in turn are faced with bigger problems than making sure their users can work on their Facebook farm faster and more securely.</p>
+<p>In terms of HTML and CSS, its possible to get past the quirks of IE and get your site to where it needs to be. The blessing that is the conditional stylesheet takes care of the big issues. Sure you have to be very wary of Javascript, and a certain evil piece of css will crash the browser, but beyond that it&#39;s not that big of a deal.</p>
+<p>The big problem for me has always been testing. For a long time I couldn&#39;t find a decent way to run IE6 on the same machine as IE7+. I tried MultiIE, and IETester, but both had their own issues ranging from poor implementation to crashes. Finally, I saw the light that is virtualization.</p>
+<p>Microsoft actually gives you virtual versions of their operating systems for testing! <a href="http://www.microsoft.com/downloads/details.aspx?FamilyId=21EABB90-958F-4B64-B5F1-73D0A413C8EF&displaylang=en">Here they are</a>.  (These expire after a certain point and you have to download new versions.)  Using <a href="http://www.microsoft.com/windows/virtual-pc/default.aspx">Virtual PC</a> Windows users (and presumably Boot Campers) can run WinXP with IE6 right on their desktop. This gives you a perfect view of how those poor saps stuck with IE6 will see your site.</p>
+<p>With these these tools, we can easily test IE 6, even as we pray for the day that it disappears forever.</p></p>
+
+  </div>
+  </section>
+</div>
+
+
+            <footer class="footer">
+                <section class="closing">
+                    <blockquote class="content-quote">Nothing can be so amusingly arrogant as a young man who has just discovered an old idea and thinks it is his own. - Sidney J. Harris</blockquote>
+                </section>
+            </footer>
+ 
+
+
+
+            </div>
+        </div>
+    </div>
+
+<script src="http://yui.yahooapis.com/3.12.0/build/yui/yui.js"></script>
+<script>
+YUI().use('node-base', 'node-event-delegate', function (Y) { Y.one('body').delegate('click', function (e) { e.preventDefault(); }, 'a[href="#"]'); });
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>How PSi Does the NPS Draw</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="description" content="A site about Erik Daniel.">
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/css/syntax.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">
+        <link rel="stylesheet" href="/css/blog.css">
+
+    </head>
+    <body>
+        <div class="pure-g-r" id="layout">
+            <div class="sidebar pure-u">
+                <header class="header">
+                <hgroup>
+                <h1 class="brand-title"><a href="/">erik daniel</a></h1>
+                <h2 class="brand-tagline">get your plane ride on time</h2>
+                </hgroup>
+                <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a class="pure-button" href="/blog">Blog</a></li>
+                    <li class="nav-item"><a class="pure-button" href="http://github.com/erikdaniel">Github</a></li>
+                    <li class="nav-item"><a class="pure-button" href="http://twitter.com/erik_daniel">Twitter</a></li>
+                </ul>
+                </nav>
+                </header>
+            </div>
+
+
+        <div class="pure-u-1">
+            <div class="content">
+            <div class="posts">
+    <section class="post">
+    <header class="post">
+    <h2 class="post-title">How PSi Does the NPS Draw</h2>
+  </header>
+  <div class="post-description">
+    <p>I have had a few questions about the draw, mostly to the effect of "Why is Team X in Venue Y with Team Z, Is that fair?" Well, I suppose it might not be, depending on how you look at it, but fairness isn't a factor in the draw. The draw is done randomly, and as Steve Marsh says often, random isn't fair.</p>
+
+<p>If you would like to know how its done, read on.</p>
+
+<!--break-->
+
+<p>The team assignments to bouts is really just numbers. It used to be as simple as an incremental bunch of numbers listed back and forth over a grid of venue names over two nights. Then team names were picked, quite literally, out of a hat. Since I'm a programmer, and I don't have a giant hat, I automated it.</p>
+
+<p>There are several sets of criteria for the schematic. There are the basic tournament rules: Two rounds of prelims, four teams per bout, with seventy six teams in total. Then there are the legal restrictions, teams with under 21 poets cannot be in venues that have an age restriction of 21. There are spacial and temporal restrictions, in that we only have three days, two time slots, and a set number of venues. Finally there are the criteria that the community has requested over the years:</p>
+
+<ul><li>Teams should have one early and one late bout</li>
+<li>Teams should not bout in the same venue twice</li>
+<li>Teams should not bout the same team twice</li>
+</ul>
+
+<p>This is the first year the draw has fit those last two, and I am really happy with it.</p>
+
+<p>The schematic itself, as I wrote, is just numbers. A set of numbers from 1 to 76. These are set in a grid that looks like the draw we generate, according to the above criteria. At no point during the creation of the schematic are team names involved.</p>
+
+<p>Once the schematic fits all the criteria, I just need to assign each team a draw number. Since I know which draw numbers are in 18+ venues, I know I need to assign teams with underage poets to those numbers.</p>
+
+<p>The numbers are randomized and applied to teams via algorithm. This is really just the <a href="http://php.net/manual/en/function.array-rand.php">array_rand function</a> in a loop, PHP's equivalent of pulling numbers out of a hat. This is done in two sets, the first for underage teams, and then the remainder for the rest. That's it.</p>
+
+<p>Once the team names are plugged in to the schematic, I send it out for proofreading to a few people, and finally to the Event Coordinator(Henry Sampson) to approve it for release. </p>
+
+<p>You may notice, that at no time do we consider that a given team shouldn't be in a venue, or that a bout is too hard, or that a team is having too easy of a time. Most of the time I don't even read the team names at all until I'm proofreading the thing for spelling errors in the team names. The thing is totally random. That might put three teams from the same city in the same bout. It might put the home team in their home venue. Is that fair? Maybe not, but doing it randomly keeps the human factor clean out of it.</p>
+
+<p>I can only imagine how the family would react if I, or a committee chosen by the EC, hand picked the bouts. I don't imagine that reaction would be good. Doing it randomly isn't necessarily fair, but I believe that randomly assigning the bouts is the most fair of the options we have.</p>
+
+<p><p>You can download the NPS2011 draw <a href="http://nps2011.com/files/NPS2011Draw.2.pdf">right here</a>.</p>
+
+  </div>
+  </section>
+</div>
+
+
+            <footer class="footer">
+                <section class="closing">
+                    <blockquote class="content-quote">Nothing can be so amusingly arrogant as a young man who has just discovered an old idea and thinks it is his own. - Sidney J. Harris</blockquote>
+                </section>
+            </footer>
+ 
+
+
+
+            </div>
+        </div>
+    </div>
+
+<script src="http://yui.yahooapis.com/3.12.0/build/yui/yui.js"></script>
+<script>
+YUI().use('node-base', 'node-event-delegate', function (Y) { Y.one('body').delegate('click', function (e) { e.preventDefault(); }, 'a[href="#"]'); });
+</script>
+
+
+</body>
+</html>
